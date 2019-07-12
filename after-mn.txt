@@ -1,0 +1,17 @@
+       PID  Namespace             Thread/Command
+        19  mnt:[4026531861]      kdevtmpfs 
+       393  mnt:[4026532160]      /lib/systemd/systemd-udevd 
+       599  net:[4026532163]      /usr/sbin/haveged --Foreground --verbose=1 -w 1024 
+       599  mnt:[4026532217]      /usr/sbin/haveged --Foreground --verbose=1 -w 1024 
+       642  mnt:[4026532218]      /lib/systemd/systemd-networkd 
+       661  mnt:[4026532220]      /lib/systemd/systemd-resolved 
+       775  mnt:[4026532221]      /usr/sbin/ModemManager --filter-policy=strict 
+       794  mnt:[4026532222]      /usr/sbin/NetworkManager --no-daemon 
+      1021  mnt:[4026532280]      /usr/sbin/chronyd 
+      1481  net:[4026532289]      /usr/lib/rtkit/rtkit-daemon 
+      1481  mnt:[4026532344]      /usr/lib/rtkit/rtkit-daemon 
+      1504  mnt:[4026532345]      /usr/lib/colord/colord 
+      2745  net:[4026532226]      bash --norc -is mininet:h1 
+      2745  mnt:[4026532224]      bash --norc -is mininet:h1 
+      2747  net:[4026532347]      bash --norc -is mininet:h2 
+      2747  mnt:[4026532287]      bash --norc -is mininet:h2 

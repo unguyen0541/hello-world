@@ -1,0 +1,45 @@
+14:27:54.478085 IP 10.5.203.192.2222 > 10.0.0.33.38470: Flags [P.], seq 3185089298:3185089547, ack 2267480319, win 244, options [nop,nop,TS val 2180422754 ecr 786222854], length 249
+14:27:54.478501 IP 10.0.0.33.38470 > 10.5.203.192.2222: Flags [.], ack 249, win 1444, options [nop,nop,TS val 786222891 ecr 2180422754], length 0
+14:27:54.561605 ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+14:27:54.561683 ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+14:27:55.585574 ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+### step 8
+IP 10.5.203.192.2222 > 10.0.0.33.38470: Flags [P.], seq 3185093206:3185093415, ack 2267481143, win 244, options [nop,nop,TS val 2180644045 ecr 786444110], length 209
+IP 10.0.0.33.38470 > 10.5.203.192.2222: Flags [.], ack 209, win 1444, options [nop,nop,TS val 786444182 ecr 2180644045], length 0
+STP 802.1w, Rapid STP, Flags [Learn, Forward, Agreement], bridge-id 8000.00:af:1f:84:29:cf.803d, length 43
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+STP 802.1w, Rapid STP, Flags [Learn, Forward, Agreement], bridge-id 8000.00:af:1f:84:29:cf.803d, length 43
+ARP, Request who-has 10.5.203.180 tell 10.0.0.1, length 46
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+STP 802.1w, Rapid STP, Flags [Learn, Forward, Agreement], bridge-id 8000.00:af:1f:84:29:cf.803d, length 43
+IP6 fe80::a8a3:a3ff:fe00:4 > ff02::2: ICMP6, router solicitation, length 16
+ARP, Request who-has 10.0.0.1 tell 10.5.203.192, length 28
+ARP, Reply 10.0.0.1 is-at 2c:56:dc:73:97:04, length 46
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+STP 802.1w, Rapid STP, Flags [Learn, Forward, Agreement], bridge-id 8000.00:af:1f:84:29:cf.803d, length 43
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0 [2q] [2n] ANY (QM)? 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.1.f.0.0.0.0.5.b.d.0.2.0.0.2.ip6.arpa. ANY (QM)? sdn-082-bchd-117.local. (160)
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/0 (Cache flush) A 172.16.2.10 (50)
+IP 172.16.2.14.5353 > 224.0.0.251.5353: 0*- [0q] 1/0/0 (Cache flush) PTR sdn-088-bchd-22.local. (119)
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0*- [0q] 2/0/0 (Cache flush) PTR sdn-082-bchd-117.local., (Cache flush) A 172.16.2.10 (88)
+IP6 fe80::a8a3:a3ff:fe51:c65d.5353 > ff02::fb.5353: 0*- [0q] 2/0/0 (Cache flush) PTR sdn-082-bchd-117.local., (Cache flush) AAAA fe80::a8a3:a3ff:fe51:c65d (148)
+IP 10.14.243.146.5353 > 224.0.0.251.5353: 0*- [0q] 4/0/0 (Cache flush) PTR sdn-082-bchd-117.local., (Cache flush) A 10.14.243.146, (Cache flush) PTR sdn-082-bchd-117.local., (Cache flush) AAAA fe80::a8a3:a3ff:fe51:c65d (200)
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0 [2q] [2n] ANY (QM)? 10.2.16.172.in-addr.arpa. ANY (QM)? sdn-082-bchd-118.local. (100)
+IP6 fe80::a8a3:a3ff:fe51:c65d.5353 > ff02::fb.5353: 0 [2q] [2n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. (160)
+IP 10.14.243.146.5353 > 224.0.0.251.5353: 0 [3q] [4n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. ANY (QM)? 146.243.14.10.in-addr.arpa. (218)
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0 [2q] [2n] ANY (QM)? 10.2.16.172.in-addr.arpa. ANY (QM)? sdn-082-bchd-118.local. (100)
+IP6 fe80::a8a3:a3ff:fe51:c65d.5353 > ff02::fb.5353: 0 [2q] [2n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. (160)
+IP 10.14.243.146.5353 > 224.0.0.251.5353: 0 [3q] [4n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. ANY (QM)? 146.243.14.10.in-addr.arpa. (218)
+STP 802.1w, Rapid STP, Flags [Learn, Forward, Agreement], bridge-id 8000.00:af:1f:84:29:cf.803d, length 43
+ARP, Request who-has 10.8.217.7 tell 10.0.0.1, length 46
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0 [2q] [2n] ANY (QM)? 10.2.16.172.in-addr.arpa. ANY (QM)? sdn-082-bchd-118.local. (100)
+IP6 fe80::a8a3:a3ff:fe51:c65d.5353 > ff02::fb.5353: 0 [2q] [2n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. (160)
+IP 10.14.243.146.5353 > 224.0.0.251.5353: 0 [3q] [4n] ANY (QM)? d.5.6.c.1.5.e.f.f.f.3.a.3.a.8.a.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa. ANY (QM)? sdn-082-bchd-118.local. ANY (QM)? 146.243.14.10.in-addr.arpa. (218)
+IP 172.16.2.10.5353 > 224.0.0.251.5353: 0*- [0q] 2/0/0 (Cache flush) PTR sdn-082-### step 9
+### step 10
+### step 11
+### step 16
+### step 17

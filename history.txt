@@ -1,0 +1,240 @@
+    1  nslookup sdn-084-bchd
+    2  exit
+    3  1sdfgfsfsedfcgbf
+    4  exit
+    5  nodes
+    6  exit
+    7  ls
+    8  ip link list
+    9  ip addr show
+   10  ip route show
+   11  sudo ovs-vsctl 
+   12  touch OVS-lab.txt
+   13  cat OVS-lab.txt 
+   14  ip link list > /tmp ovs2-link-init
+   15  ip link list > /tmp/ovs2-link-init
+   16  ip addr show > /tmp/ovs-addr-init
+   17  ip addr route > /tmp/ovs-route-init
+   18  ip route show > /tmp/ovs-route-init
+   19  sudo ovs-vsctl show > /tmp/ovs-vsctl-int
+   20  sudo ip netns add peach
+   21  sudo ip netns add bowser
+   22  sudo ovs-vsctl add-br donut-plains
+   23  sudo ip link add eth0-peach type veth peer name veth-peach
+   24  sudo ip link add eth0-bowser type veth peer name veth-bowser
+   25  sudo ip link set eth0-peach netsns peach
+   26  sudo ip link set eth0-peach netns peach
+   27  ls
+   28  sudo ip link set eth0-bowser netns bowser
+   29  sudo ovs-vsctl add-port donut-plains veth-peach
+   30  sudo ovs-vsctl add-port donut-plains veth-bowser
+   31  sudo ovs-vsctl set port veth-peach tag=50
+   32  sudo ovs-vsctl set port veth-bowser tag=150
+   33  ip link show
+   34  sudo ip link set veth-peach up
+   35  sudo ip link set veth-bowser up
+   36  sudo ip netns exec peach ip link set dev eth0-peach up
+   37  sudo ip netns exec bowser ip link set dev eth0-bowser up
+   38  ip link list > /tmp/ovs2-link-config
+   39  ip show list > /tmp/ovs2-show-config
+   40  ip addr show > /tmp/ovs2-addr-config
+   41  rm /tmp/ovs2-show-config 
+   42  ip route show > /tmp/ovs2-route-config
+   43  sudo ovs-vsctl show > /tmp/ovs-show-config
+   44  sudo ip netns add dhcp-peach
+   45  sudo ip netns add dhcp-bowser
+   46  sudo ovs-vsctl add-port donut-plains dhcp-peach -- set interface dhcp-peach type=internal
+   47  sudo ovs-vsctl add-port donut-plains dhcp-bowser -- set interface dhcp-bowser type=internal
+   48  sudo ovs-vsctl set port dhcp-peach tag=50
+   49  sudo ovs-vsctl set port dhcp-bowser tag=150
+   50  ip link show > /tmp/ovs2-link-dhcp
+   51  ip addr show > /tmp/ovs2-addr-dhcp
+   52  ip route show > /tmp/ovs2-route-dhcp
+   53  ls /tmp/*dhcp
+   54  ls /tmp/*show*
+   55  ip link show > /tmp/ovs-link-dhcp-ns
+   56  ip link show
+   57  a3diff /tmp/ovs2-link-dhcp /tmp/ovs-link-dhcp-ns 
+   58  sudo ip netns exec dhcp-peach ip link set dev dhcp-peach up
+   59  clear
+   60  ip link show
+   61  history
+   62  sudo ip link set dhcp-peach netns dhcp-peach
+   63  sudo ip link set dhcp-bowser netns dhcp-bowser
+   64  sudo ip netns exec ip link
+   65  sudo ip netns exec dhcp-peach ip link
+   66  sudo ip netns exec dhcp-peach ip link set dev dhcp-peach up
+   67  sudo ip netns exec dhcp-peach ip addr add 172.16.2.50/24 dev dhcp-peach
+   68  sudo ip netns exec d
+   69  sudo ip netns exec dhcp-peach dnsmasq --interface=dhcp-peach --dhcp-range=172.16.2.51,172.16.2.149,255.255.255.0
+   70  sudo ip netns exec dhcp-bowser dnsmasq --interface=dhcp-bowser --dhcp-range=172.16.2.151,172.16.2.249,255.255.255.0
+   71  sudo ip netns exec dhcp-peach dhclient eth0-peach
+   72  sudo ip netns exec peach dhclient eth0-peach
+   73  sudo ip netns exec bowser dhclient eth0-bowser
+   74  sudo ip netns exec peach ip addr
+   75  sudo ip netns exec bowser dhclient eth0-bowser
+   76  sudo ovs-vsctl show
+   77  history
+   78  sudo ip netns exec peach ip link
+   79  ip link
+   80  sudo ip netns exec bowser ip link
+   81  history
+   82  ip a
+   83  ip addr
+   84  ip addr show
+   85  sudo ip addr show
+   86  history
+   87  sudo ip netns exec peach ip addr
+   88  sudo ip netns exec dhcp-peach ip addr
+   89  sudo ip netns exec dhcp-bowser ip addr
+   90  sudo ip netns exec dhcp-bowser ip link set dev dhcp-bowser up
+   91  sudo ovs-ofctldump-flow donut-plains
+   92  ifconfig
+   93  ip addr show
+   94  history
+   95  sudo ip addr show
+   96  history
+   97  sudo ip netns exec peach ip addr
+   98  sudo ip netns exec bowser ip addr
+   99  ping -c 172.16.2.226
+  100  ping -c 172.16.2.141
+  101  ping 172.16.2.141
+  102  sudo ip netns del peach
+  103  sudo ip netns del dhcp-peach
+  104  sudo ip netns del bowser
+  105  sudo ip netns del dhcp-bowser
+  106  sudo ip link del veth-peach
+  107  sudo ip link del veth-bowser
+  108  sudo ovs-vsctl del-br donut-plains
+  109  ip link list
+  110  wget https://alta3.com/static/files/openflow.pc
+  111  wget https://alta3.com/static/files/openflow_v1.3_messages.pcapng
+  112  pws
+  113  ls
+  114  wireshark openflow_v1.3_messages.pcapng 
+  115  clear
+  116  sudo mn
+  117  sudo mn --clean
+  118  sudo mn --link tc,bw=20,delay=20
+  119  sudo mn --clean
+  120  mininet
+  121  sudo mn
+  122  sudo mn --topo=single,5
+  123  sudo mn --topo=linear,5
+  124  ls
+  125  cat mininet.txt
+  126  sudo mn --topo==tree,4
+  127  su student
+  128  sudo mn
+  129  sudo mn --clean
+  130  wget https://alta3.com/static/files/mininet.py
+  131  wget https://alta3.com/static/files/miniedit.py
+  132  sudo python miniedit.py
+  133  ls
+  134  clear
+  135  ip link list
+  136  sudo mn clean
+  137  ip link list
+  138  ps aux | grep mini
+  139  sudo pkill 25589
+  140  ps aux | grep mini
+  141  sudo kill 25589
+  142  ps aux | grep mini
+  143  ps | grep mini
+  144  ps 
+  145  kill 25589
+  146  sudo kill 25589
+  147  ps aux | grep mini
+  148  sudo kill 25590
+  149  sudo pkill 25590
+  150  sudo pkill 25589
+  151  sudo shutdown now -r
+  152  ip link list
+  153  sudo mn
+  154  sudo ip netsns add myspace
+  155  sudo ip netsns delete myspace
+  156  sudo ip netsns del myspace
+  157  ip addr show
+  158  h1 ip addr show
+  159  sudo mn
+  160  h1 ip link list
+  161  sudo mn
+  162  sudo mn clean
+  163  ip link list
+  164  sudo mn
+  165  sudo mn --clean
+  166  ls
+  167  alias cp
+  168  copy topo2.py 
+  169  clear
+  170  ls *.py
+  171  pingall
+  172  vim topo2.py 
+  173  cat topo2.py 
+  174  sudo mn --clean
+  175  wireshark 
+  176  cat topo2.py
+  177  wireshark 
+  178  history
+  179  wireshark 
+  180  sudo wireshark
+  181  sudo vim /var/kvm/images/cloud-config
+  182  cloud-localds\/var/kvm/images/beachhead-cloud-init.iso /var/kvm/images/cloud-config
+  183  cloud-localds\ /var/kvm/images/beachhead-cloud-init.iso /var/kvm/images/cloud-config
+  184  cloud-localds /var/kvm/images/beachhead-cloud-init.iso /var/kvm/images/cloud-config
+  185  sudo ls /var/kvm/images
+  186  sudo ls -la /var/kvm/images
+  187  cloud-localds /var/kvm/images/beachhead-cloud-init.iso /var/kvm/images/cloud-config
+  188  wget https://alta3.com/static/projects/ansible.ovs.sh
+  189  wget https://alta3.com/static/projects/ansible/ovs.sh
+  190  ls
+  191  cat ovs.sh
+  192  ls
+  193  sudo sh ovs.sh
+  194  history
+  195  sudo ovs-vsctl1 show
+  196  cd
+  197  wget https://alta3.com/static/files/napya/usopen.py
+  198  wget https://alta3.com/static/images/python/ip_list.xls
+  199  ls
+  200  cat ip_list.xls 
+  201  clear
+  202  python -n pip install pyexcel pyexcel-xls netmiko
+  203  python -m pip install pyexcel pyexcel-xls netmiko
+  204  python3 -m pip install pyexcel pyexcel-xls netmiko
+  205  pwd
+  206  ls
+  207  python3 usopen.py
+  208  ls
+  209  clear
+  210  vim hosts
+  211  vim playbook01.yml
+  212  ansible-playbook playbook01.yml -i hosts
+  213  ls
+  214  vim playbook01.yml +2
+  215  ansible-playbook playbook01.yml -i hosts
+  216  vim playbook01.yml +2
+  217  ansible-playbook playbook01.yml -i hosts
+  218  ssh 172.16.2.10
+  219  ansible-playbook playbook01.yml -i hosts
+  220  ssh 172.16.2.10
+  221  ansible-playbook playbook01.yml -i hosts
+  222  vim playbook01.yml
+  223  ansible-playbook playbook01.yml -i hosts
+  224  pwd
+  225  ls
+  226  git init
+  227  git add *
+  228  mkdir hello-world
+  229  mv *.py hello-world/
+  230  mv *.txt hello-world/
+  231  ls
+  232  mv *.pcap hello-world/
+  233  ls
+  234  mv *.sh hello-world/
+  235  mv *.xls hello-world/
+  236  mv *.pcapng hello-world/
+  237  mv *.yml hello-world/
+  238  ls
+  239  mv hosts hello-world/
+  240  history > hello-world/history.txt

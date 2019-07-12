@@ -1,0 +1,28 @@
+---
+- name: Zach arista config ssaver
+  hosts: all
+  gather_facts: no
+  vars:
+          ansible_connection: network_cli
+          ansible_network_os: eos
+          ansible_become: yes # this is a comment - run as root
+          ansible_become_method: enable 
+          ansible_user: admin
+          ansible_ssh_pass: alta3
+
+
+  tasks:
+          - name: grap arista config
+            eos_facts:
+                    gather_subset: all
+
+          - name: make directory
+            file:
+                    path: ~/aristaconfig
+                    state: directory
+
+          - name: create back up config
+            copy:
+                    content: "{{ ansible_net_config }}"
+                    dest: ~/aristaconfig/sw1.backup
+
